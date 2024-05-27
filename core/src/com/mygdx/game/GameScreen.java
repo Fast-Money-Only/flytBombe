@@ -98,14 +98,13 @@ public class GameScreen implements Screen {
     }
 
     public void checkKeyspressed(){
-        // Check for input to change bucket position
         if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
-            // Move bucket left
+            // Flyt bombe til venstre
             currentPositionIndex = (currentPositionIndex - 1 + positions.length) % positions.length;
             bombe.setX(positions[currentPositionIndex] - (float) bombe.width /2);
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
-            // Move bucket right
+            // Flyt bombe til højre
             currentPositionIndex = (currentPositionIndex + 1) % positions.length;
             bombe.setX(positions[currentPositionIndex] - (float) bombe.width /2);
         }
